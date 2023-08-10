@@ -14,7 +14,7 @@ pip install argparse2typer
 2. Import the function `from argparse2typer import argparse2typer`
 3. Run the function before `parse_args`:
 ```
-argparse2typer(parser) # <- new line
+argparse2typer(parser=parser, output_path=Path(<path>)) # <- new line
 args = parser.parse_args()
 ```
-4. New file will be created with the typer CLI format!
+4. New file @<path> will be created with the typer CLI format!

@@ -140,7 +140,21 @@ def argparse2typer(
     create_app: bool = False,
     get_args: bool = True,
     override_output: bool = False,
-):
+) -> List[str]:
+    """ Porting argparse's ArgumentParser into TyperCLI
+
+    Args:
+        parser (argparse.ArgumentParser): The existing parser.
+        output_path (Path, optional): Path to write ported code into new file. Defaults to None.
+        import_typer (bool, optional): Import typer in the header. Defaults to False.
+        create_app (bool, optional): Create typer app. Defaults to False.
+        get_args (bool, optional): simulate args variable from argparse. Defaults to True.
+        override_output (bool, optional): Override output_path if exist. Defaults to False.
+
+    Returns:
+        List[str]: The filescript using typer CLI
+    """
+
     actions = parser._actions
     imports = set()
     if import_typer:
