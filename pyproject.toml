@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "argparse2typer"
+version = "0.0.1"
+authors = [
+  { name="termanteus", email="termanteus@gmail.com" },
+]
+description = "Convert Python's default argparse into typer CLI"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'num2words',
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/bomcon123456/argparse2typer"
+"Bug Tracker" = "https://github.com/pypa/argparse2typer/issues"
